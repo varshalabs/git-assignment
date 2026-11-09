@@ -1,0 +1,117 @@
+Git Commands Used in the Assignment
+
+1. Git Configuration
+
+command :  git config --global user.name "Name"
+explanation : Configures the author's name globally for git commits.
+
+command : git config --global user.email "Email"
+explanation : Configures the author's email address globally for git commits.
+
+command : git config --global user.name
+          git config --global user.email
+explanation : Displays the globally configured Git username and email address.
+
+
+2. Repository Initialization 
+
+command : git init 
+explanation : Initializes a new local Git repository in the current project directory.
+
+command : git brach -M main 
+explanation : Renames the current branch to main.
+
+
+3. File Staging and commits
+
+command : git add .
+explanation : Stages all new, modified, and deleted files in the current directory and its subdirectories (except files ignored by .gitignore) for the next commit.
+
+command : git add index.html 
+explanation : Stages the modified index.html file.
+
+command : git add about.html 
+explanation : Stages the modified about.html file.
+
+command : git commit -m "Initial commit: Add home and about pages"
+explanation : Records the initial project files in Git history.
+
+command : git commit -m "Update home page content"
+explanation : Records modifications made to the home page.
+
+command : git commit -m "Add feature branch update to about page"
+explanation : Records changes made to the about page on the feature branch.
+
+command : git add .gitignore 
+explanation : Stages the .gitignore file for commiting.
+
+command : git commit -m "Add gitignore rules for log files and temp directory"
+explanation : Saves the git ignore configuration in repository history.
+
+command : git add undo_test.txt
+explanation : Stages the temporary file used to demonstrate Git's undo operation.
+
+command : git commit -m "Add file to demonstrate Git undo operation"
+explanation : Creates an additional commit to demonstrate the undo operation.
+
+
+4. Checking Repository Status, Changes and History
+
+command : git Status
+explanation : Displays the current branch and the status of modified, staged, and untracked files.
+
+command : git diff
+explanation : Displays differences between the working directory and the staging area.
+
+command : git log 
+explanation : Displays the complete commit history, including commit hashes, author information, dates, and commit messages.
+
+command : git log -oneline 
+explanation : Displays commit history in a compact, single-line format.
+
+command : git log --oneline -3 
+explanation : Displays the three most recent commits.
+
+command : git log --oneline --all --decorate
+explanation : Displays commits from all branches along with brach references.
+
+command : git status --ignored
+explanation : Displays repository status, including files and folders ignored by Git.
+
+5. Branching and Merging 
+
+command : git branch feature
+explanation : Creates a new branch named feature.
+
+command : git branch 
+explanation : Lists local branches and identifies the currently active branch.
+
+command : git switch feature
+explanation : Switches the working directory to the feature branch.
+
+command : git switch main 
+explanation : Switches the working directory back to the main branch.
+
+command : git merge feature -m "Merge feature branch into main"
+explanation : Merges changes from the feature branch into the currently active main branch.
+
+
+6. Undo operation
+
+command : git revert --no-edit HEAD
+explanation : Creates a new commit that reverses the changes introduced by the most recent commit while preserving the original commit history.
+
+
+7. GitHub Remote Repository Integration
+
+command : git remote add origin [repository-url]
+explanation : Connects the local repository to the remote GitHub repository.
+
+command : git remote -v
+explanation : Displays the configured remote repository URLs for fetching and pushing.
+
+command : git push -u origin main
+explanation : Pushes the local branch to Github and establishes upstream tracking.
+
+command : git push -u origin feature
+explanation : Pushes the feature branch to GitHub and establishes upstream tracking.
